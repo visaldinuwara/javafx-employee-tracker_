@@ -8,15 +8,14 @@
 <?import javafx.scene.layout.VBox?>
 
 <?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
 <AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #2b2b2b;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.logInController"> <!-- Dark background -->
 
     <!-- Anchor logo image above company name -->
     <ImageView layoutX="50.0" layoutY="100.0"
                fitHeight="150" fitWidth="200.0"
                pickOnBounds="true" preserveRatio="true">
-        <image>
-            <Image url="/Media/samsungLogo.png"/>
-        </image>
+        <Image url="/Media/Gemini_Generated_Image_s1zxmns1zxmns1zx.png"/>
     </ImageView>
 
 

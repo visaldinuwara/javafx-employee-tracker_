@@ -1,49 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="Controller.dashBoardController"
-            prefHeight="500.0" prefWidth="800.0"
-            style="-fx-background-color: linear-gradient(to bottom, #000000, #001f3f);">
+<AnchorPane prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: linear-gradient(to bottom, #000000, #001f3f);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.dashBoardController">
 
     <!-- Header -->
-    <Label text="Employee Management Page"
-           layoutX="200.0" layoutY="30.0"
-           style="-fx-text-fill: #a9a9a9; -fx-font-size: 24px; -fx-font-weight: bold;" />
+    <Label layoutX="200.0" layoutY="30.0" style="-fx-text-fill: #a9a9a9; -fx-font-size: 24px; -fx-font-weight: bold;" text="Employee Management Page" />
 
     <!-- Button Panel -->
 
     <VBox layoutX="500.0" layoutY="100.0" spacing="12.0">
-        <Button fx:id="btnAddEmployee" text="Add Employee"
-                style="-fx-background-color: #1a1a1a; -fx-text-fill: #d3d3d3; -fx-background-radius: 30; -fx-border-radius: 30; -fx-border-color: #a9a9a9; -fx-border-width: 1;" />
-        <Button fx:id="btnUpdateEmployee" text="Update Employee"
-                style="-fx-background-color: #1a1a1a; -fx-text-fill: #d3d3d3; -fx-background-radius: 30; -fx-border-radius: 30; -fx-border-color: #a9a9a9; -fx-border-width: 1;" />
-        <Button fx:id="btnDeleteEmployee" text="Delete Employee"
-                style="-fx-background-color: #1a1a1a; -fx-text-fill: #d3d3d3; -fx-background-radius: 30; -fx-border-radius: 30; -fx-border-color: #a9a9a9; -fx-border-width: 1;" />
-        <Button fx:id="btnViewEmployee" text="View/Search Employee"
-                style="-fx-background-color: #1a1a1a; -fx-text-fill: #d3d3d3; -fx-background-radius: 30; -fx-border-radius: 30; -fx-border-color: #a9a9a9; -fx-border-width: 1;" />
-        <Button fx:id="btnDepartmentInfo" text="Department Info"
-                style="-fx-background-color: #1a1a1a; -fx-text-fill: #d3d3d3; -fx-background-radius: 30; -fx-border-radius: 30; -fx-border-color: #a9a9a9; -fx-border-width: 1;" />
-        <Button fx:id="btnAttendance" text="Attendance Tracker"
-                style="-fx-background-color: #1a1a1a; -fx-text-fill: #d3d3d3; -fx-background-radius: 30; -fx-border-radius: 30; -fx-border-color: #a9a9a9; -fx-border-width: 1;" />
-        <Button fx:id="btnLogout" text="Logout"
-                style="-fx-background-color: #333333; -fx-text-fill: #d3d3d3; -fx-background-radius: 30; -fx-border-radius: 30; -fx-border-color: #a9a9a9; -fx-border-width: 1;" />
+        <Button fx:id="btnAddEmployee" onAction="#btnAddEmployee" style="-fx-background-color: #1a1a1a; -fx-text-fill: #d3d3d3; -fx-background-radius: 30; -fx-border-radius: 30; -fx-border-color: #a9a9a9; -fx-border-width: 1;" text="Add Employee" />
+        <Button fx:id="btnUpdateEmployee" onAction="#btnUpdateEmployee" style="-fx-background-color: #1a1a1a; -fx-text-fill: #d3d3d3; -fx-background-radius: 30; -fx-border-radius: 30; -fx-border-color: #a9a9a9; -fx-border-width: 1;" text="Update Employee" />
+        <Button fx:id="btnDeleteEmployee" onAction="#btnDeleteEmployee" style="-fx-background-color: #1a1a1a; -fx-text-fill: #d3d3d3; -fx-background-radius: 30; -fx-border-radius: 30; -fx-border-color: #a9a9a9; -fx-border-width: 1;" text="Delete Employee" />
+        <Button fx:id="btnViewEmployee" onAction="#btnViewEmployee" style="-fx-background-color: #1a1a1a; -fx-text-fill: #d3d3d3; -fx-background-radius: 30; -fx-border-radius: 30; -fx-border-color: #a9a9a9; -fx-border-width: 1;" text="View/Search Employee" />
+        <Button fx:id="btnDepartmentInfo" onAction="#btnDepartmentInfo" style="-fx-background-color: #1a1a1a; -fx-text-fill: #d3d3d3; -fx-background-radius: 30; -fx-border-radius: 30; -fx-border-color: #a9a9a9; -fx-border-width: 1;" text="Department Info" />
+        <Button fx:id="btnAttendance" onAction="#btnAttendance" style="-fx-background-color: #1a1a1a; -fx-text-fill: #d3d3d3; -fx-background-radius: 30; -fx-border-radius: 30; -fx-border-color: #a9a9a9; -fx-border-width: 1;" text="Attendance Tracker" />
+        <Button fx:id="btnLogout" style="-fx-background-color: #333333; -fx-text-fill: #d3d3d3; -fx-background-radius: 30; -fx-border-radius: 30; -fx-border-color: #a9a9a9; -fx-border-width: 1;" text="Logout" />
     </VBox>
 
     <!-- Motto Panel with unified ash color -->
-    <VBox layoutX="50.0" layoutY="120.0" spacing="10.0" prefWidth="400.0">
-        <Label text="Empowering People. Driving Innovation."
-               style="-fx-text-fill: #a9a9a9; -fx-font-size: 18px; -fx-font-weight: bold;" />
-        <Label text="At Samsung, every employee is a catalyst for change. We believe in growth, collaboration, and excellence."
-               wrapText="true"
-               style="-fx-text-fill: #a9a9a9; -fx-font-size: 14px;" />
-        <Label text="Together, we build the future—one idea, one solution, one team at a time."
-               wrapText="true"
-               style="-fx-text-fill: #a9a9a9; -fx-font-size: 14px;" />
+    <VBox layoutX="50.0" layoutY="120.0" prefWidth="400.0" spacing="10.0">
+        <Label style="-fx-text-fill: #a9a9a9; -fx-font-size: 18px; -fx-font-weight: bold;" text="Empowering People. Driving Innovation." />
+        <Label style="-fx-text-fill: #a9a9a9; -fx-font-size: 14px;" text="At Samsung, every employee is a catalyst for change. We believe in growth, collaboration, and excellence." wrapText="true" />
+        <Label style="-fx-text-fill: #a9a9a9; -fx-font-size: 14px;" text="Together, we build the future—one idea, one solution, one team at a time." wrapText="true" />
     </VBox>
 
 </AnchorPane>
